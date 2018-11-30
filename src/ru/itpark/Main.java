@@ -1,13 +1,12 @@
 package ru.itpark;
 
 import ru.itpark.comparator.HousePriceAscComparator;
-import ru.itpark.comparator.HousePriceDscComparator;
+import ru.itpark.comparator.HousePriceDescComparator;
 import ru.itpark.domain.House;
 import ru.itpark.repository.HouseRepository;
 import ru.itpark.service.HouseService;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -45,7 +44,7 @@ public class Main {
 
         System.out.println(service.getSorted(new HousePriceAscComparator()));
         System.out.println();
-        System.out.println(service.getSorted(new HousePriceDscComparator()));
+        System.out.println(service.getSorted(new HousePriceDescComparator()));
         System.out.println();
 
         ArrayList<String> districts = new ArrayList<>();
